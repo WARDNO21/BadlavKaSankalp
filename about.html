@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>परिचय | पंकज सैनी</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <div class="brand">
+      <strong>पंकज सैनी</strong>
+      <span>वार्ड पार्षद प्रत्याशी • वार्ड नं. 21, टोंक</span>
+    </div>
+    <button class="menu" onclick="document.querySelector('.links').classList.toggle('show')">☰</button>
+    <div class="links">
+      <a href="index.html">होम</a>
+      <a href="about.html" class="active">परिचय</a>
+      <a href="vision.html">हमारा संकल्प</a>
+      <a href="gallery.html">गैलरी</a>
+      <a href="symbol.html">चुनाव चिन्ह</a>
+      <a href="janta-ki-awaz.html">🗣️ जनता की आवाज़</a><a href="contact.html">संपर्क करें</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <h1>पंकज सैनी का परिचय</h1>
+  <p>जनसेवा, सामाजिक सहभागिता और वार्ड नं. 21 के विकास के लिए प्रतिबद्ध</p>
+</section>
+
+<section>
+  <div class="container about-grid">
+    <div class="about-card">
+      <div class="eyebrow">परिचय</div>
+      <h2>पंकज सैनी</h2>
+      <p>
+        पंकज सैनी जनसेवा और सामाजिक कार्यों से जुड़े रहे हैं तथा टोंक क्षेत्र में
+        समाज और जनहित से संबंधित गतिविधियों में सक्रिय भूमिका निभाते रहे हैं।
+        वार्ड नं. 21 के नागरिकों की बात सुनना और स्थानीय मुद्दों को प्राथमिकता
+        देना उनकी जनसेवा की सोच का महत्वपूर्ण हिस्सा है।
+      </p>
+
+      <div class="quote">
+        “सेवा का अनुभव, समाज का विश्वास और वार्ड के विकास का संकल्प।”
+      </div>
+    </div>
+
+    <div class="info-list">
+      <div class="info"><span>👤</span> नाम: पंकज सैनी</div>
+      <div class="info"><span>🤝</span> जनसेवक एवं समाजसेवी</div>
+      <div class="info"><span>🟠</span> टोंक भाजपा शहर मंत्री</div>
+      <div class="info"><span>🛕</span> तुम्बीपुरा तुम्बेश्वर महादेव मंदिर अध्यक्ष</div>
+      <div class="info"><span>📍</span> क्षेत्र: वार्ड नं. 21, टोंक</div>
+      <div class="info"><span>🏛️</span> पद: नगर परिषद वार्ड पार्षद प्रत्याशी</div>
+      <div class="info"><span>🗳️</span> प्रत्याशी: निर्दलीय</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">जनसेवा का उद्देश्य</div>
+      <h2>जनता की बात, विकास के साथ</h2>
+      <p>
+        स्थानीय नागरिकों की समस्याओं और वार्ड की आवश्यकताओं को समझते हुए
+        सकारात्मक संवाद और बेहतर विकास की दिशा में प्रयास।
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <strong>पंकज सैनी</strong> • वार्ड नं. 21, टोंक<br>
+    <small>© 2026 • संपर्क: 7597357607</small>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".links a").forEach(a =>
+  a.addEventListener("click", () =>
+    document.querySelector(".links").classList.remove("show")
+  )
+);
+</script>
+</body>
+</html>

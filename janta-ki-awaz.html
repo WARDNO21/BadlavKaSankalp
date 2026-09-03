@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>जनता की आवाज़ | पंकज सैनी</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="container navin">
+    <div class="brand">
+      <strong>पंकज सैनी</strong>
+      <span>वार्ड पार्षद प्रत्याशी • वार्ड नं. 21, टोंक</span>
+    </div>
+    <button class="menu" aria-label="मेनू खोलें" onclick="document.querySelector('.links').classList.toggle('show')">☰</button>
+    <div class="links">
+      <a href="index.html">होम</a>
+      <a href="about.html">परिचय</a>
+      <a href="vision.html">हमारा संकल्प</a>
+      <a href="gallery.html">गैलरी</a>
+      <a href="symbol.html">चुनाव चिन्ह</a>
+      <a href="janta-ki-awaz.html" class="active">🗣️ जनता की आवाज़</a>
+      <a href="contact.html">संपर्क करें</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <h1>🗣️ जनता की आवाज़</h1>
+  <p>“वार्ड नं. 21 से जुड़ी अपनी समस्या, सुझाव या महत्वपूर्ण जानकारी हमारे साथ साझा करें।”</p>
+</section>
+
+<section>
+  <div class="container voice-wrap">
+    <div class="voice-card">
+      <div class="voice-intro">
+        <div class="eyebrow">जनसंवाद</div>
+        <h2>आपकी बात दर्ज करें</h2>
+        <p>नीचे दी गई जानकारी भरकर अपनी समस्या, सुझाव या विषय हमारे साथ साझा करें।</p>
+      </div>
+
+      <form class="voice-form" id="voiceForm" novalidate>
+        <div class="voice-grid">
+          <div class="form-field">
+            <label for="name">👤 आपका नाम</label>
+            <input id="name" name="name" type="text" placeholder="अपना नाम लिखें" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="mobile">📱 मोबाइल नंबर</label>
+            <input id="mobile" name="mobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10 अंकों का मोबाइल नंबर" autocomplete="tel">
+          </div>
+          <div class="form-field">
+            <label for="area">📍 मोहल्ला / क्षेत्र</label>
+            <input id="area" name="area" type="text" placeholder="मोहल्ला या क्षेत्र का नाम">
+          </div>
+          <div class="form-field">
+            <label for="topic">⚠️ समस्या या विषय चुनें</label>
+            <select id="topic" name="topic">
+              <option value="">विषय चुनें</option>
+              <option value="सड़क">सड़क</option><option value="पानी">पानी</option>
+              <option value="सफाई">सफाई</option><option value="स्ट्रीट लाइट">स्ट्रीट लाइट</option>
+              <option value="नाली">नाली</option><option value="सुझाव">सुझाव</option>
+              <option value="अन्य">अन्य</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="message">📝 अपनी बात विस्तार से लिखें</label>
+            <textarea id="message" name="message" placeholder="अपनी समस्या, सुझाव या महत्वपूर्ण जानकारी विस्तार से लिखें..."></textarea>
+          </div>
+          <div class="form-field full">
+            <label for="photo">📸 फोटो अपलोड करें (Optional)</label>
+            <input id="photo" name="photo" type="file" accept="image/*">
+            <span class="form-help">यदि समस्या से संबंधित फोटो हो तो जोड़ सकते हैं।</span>
+          </div>
+        </div>
+        <div id="voiceStatus" class="voice-status" role="alert" aria-live="polite"></div>
+        <button class="btn primary voice-submit" type="submit">📤 अपनी बात भेजें</button>
+      </form>
+
+      <div class="voice-note">🌱 “मजबूत वार्ड की शुरुआत तब होती है, जब हर नागरिक की आवाज़ को महत्व दिया जाता है।”</div>
+    </div>
+  </div>
+</section>
+
+<div class="success-modal" id="successModal" aria-hidden="true">
+  <div class="success-modal__card" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div class="success-check-wrap" aria-hidden="true">
+      <div class="success-ring"></div>
+      <div class="success-check">
+        <svg viewBox="0 0 52 52"><path d="M14 27l8 8 17-18"/></svg>
+      </div>
+    </div>
+    <h2 id="successTitle">🗣️ आपकी आवाज़ हम तक पहुँच गई है</h2>
+    <p>धन्यवाद! आपने वार्ड नं. 21 से जुड़ी अपनी समस्या या सुझाव हमारे साथ साझा किया है।</p>
+    <div class="success-highlight">
+      <strong>अभी वार्ड नं. 21 का पार्षद नहीं है।</strong>
+      <span>आपकी बात को समझना और संबंधित स्तर तक पहुँचाने का प्रयास करना महत्वपूर्ण है।</span>
+    </div>
+    <p class="success-quote">🌱 “आपकी आवाज़, आपके वार्ड को बेहतर बनाने की दिशा में एक कदम है।”</p>
+    <button type="button" class="btn primary success-close" id="successClose">✓ ठीक है</button>
+  </div>
+</div>
+
+<footer>
+  <div class="container"><strong>पंकज सैनी</strong> • वार्ड नं. 21, टोंक<br><small>© 2026 • संपर्क: 7597357607</small></div>
+</footer>
+
+<script>
+document.querySelectorAll('.links a').forEach(a =>
+  a.addEventListener('click', () => document.querySelector('.links').classList.remove('show'))
+);
+
+const API_ENDPOINT = ""; // भविष्य में Backend/API या Google Apps Script URL यहाँ डालें
+const form = document.getElementById('voiceForm');
+const statusBox = document.getElementById('voiceStatus');
+const modal = document.getElementById('successModal');
+const closeButton = document.getElementById('successClose');
+let lastFocusedElement = null;
+
+function showError(message, field) {
+  statusBox.textContent = message;
+  statusBox.className = 'voice-status show error';
+  if (field) field.focus();
+}
+function clearStatus() {
+  statusBox.textContent = '';
+  statusBox.className = 'voice-status';
+}
+function validateForm() {
+  if (!form.name.value.trim()) { showError('कृपया अपना नाम लिखें।', form.name); return false; }
+  if (!/^\d{10}$/.test(form.mobile.value.trim())) { showError('कृपया 10 अंकों का सही मोबाइल नंबर लिखें।', form.mobile); return false; }
+  if (!form.area.value.trim()) { showError('कृपया अपना मोहल्ला / क्षेत्र लिखें।', form.area); return false; }
+  if (!form.topic.value.trim()) { showError('कृपया समस्या या विषय चुनें।', form.topic); return false; }
+  if (!form.message.value.trim()) { showError('कृपया अपनी बात विस्तार से लिखें।', form.message); return false; }
+  clearStatus();
+  return true;
+}
+function openSuccessModal() {
+  lastFocusedElement = document.activeElement;
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  closeButton.focus();
+}
+function closeSuccessModal() {
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  form.reset();
+  clearStatus();
+  if (lastFocusedElement) lastFocusedElement.focus();
+}
+async function sendToBackend(payload) {
+  if (!API_ENDPOINT) return { demo: true };
+  const response = await fetch(API_ENDPOINT, { method: 'POST', body: payload });
+  if (!response.ok) throw new Error('Request failed');
+  return response;
+}
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (!validateForm()) return;
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalText = submitButton.innerHTML;
+  submitButton.disabled = true;
+  submitButton.innerHTML = 'भेजा जा रहा है...';
+
+  try {
+    const payload = new FormData(form);
+    await sendToBackend(payload);
+    openSuccessModal();
+  } catch (error) {
+    showError('जानकारी भेजने में समस्या हुई। कृपया दोबारा प्रयास करें।');
+    console.error(error);
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = originalText;
+  }
+});
+closeButton.addEventListener('click', closeSuccessModal);
+modal.addEventListener('click', event => { if (event.target === modal) closeSuccessModal(); });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && modal.classList.contains('is-open')) closeSuccessModal();
+});
+</script>
+</body>
+</html>
